@@ -3,57 +3,236 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fadel Commerce</title>
-<meta name="description" content="Fadel Commerce - Freelance et services numériques au Bénin">
+<title>Fadel Commerce | Commerce agricole & Solutions numériques</title>
+<meta name="description" content="Fadel Commerce : achat et vente de soja, karité et acajou, création de boutiques e-commerce, bots Telegram et services numériques.">
 <style>
-body{font-family:Arial,sans-serif;background:#f5f7fa;color:#172033;margin:0}
-.container{max-width:800px;margin:auto;padding:30px 20px}
-.card{background:white;padding:35px;border-radius:18px;box-shadow:0 5px 25px rgba(0,0,0,.08)}
-h1{font-size:36px;margin-bottom:5px}
-h2{margin-top:30px}
-p,li{line-height:1.7}
-.badge{display:inline-block;background:#eef2ff;padding:8px 14px;border-radius:20px}
-.contact{border-top:1px solid #ddd;margin-top:30px;padding-top:20px}
-.button{display:inline-block;background:#111827;color:white;padding:12px 18px;border-radius:8px;text-decoration:none}
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7f5;
+    color:#172018;
+    line-height:1.6
+}
+header{
+    background:#123c28;
+    color:white;
+    padding:45px 20px;
+    text-align:center
+}
+header h1{font-size:38px;margin:0 0 10px}
+header p{font-size:18px;margin:0}
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:35px 20px
+}
+h2{
+    color:#123c28;
+    margin-top:10px
+}
+.intro{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 4px 18px rgba(0,0,0,.06);
+    margin-bottom:30px
+}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:22px
+}
+.card{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 4px 18px rgba(0,0,0,.08)
+}
+.card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    display:block
+}
+.card-content{padding:20px}
+.card h3{margin-top:0;color:#123c28}
+.button{
+    display:inline-block;
+    background:#168f50;
+    color:white;
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:9px;
+    font-weight:bold;
+    margin-top:8px
+}
+.button:hover{opacity:.9}
+.services{
+    margin-top:45px
+}
+.contact{
+    margin-top:45px;
+    background:#123c28;
+    color:white;
+    padding:30px;
+    border-radius:16px
+}
+.contact h2{color:white}
+footer{
+    text-align:center;
+    padding:25px;
+    color:#667066;
+    font-size:14px
+}
+.badge{
+    display:inline-block;
+    background:#e5f4eb;
+    color:#12663a;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px
+}
 </style>
 </head>
+
 <body>
-<div class="container">
-<div class="card">
 
-<span class="badge">Fadel Commerce</span>
+<header>
+    <h1>Fadel Commerce</h1>
+    <p>Commerce agricole • E-commerce • Solutions numériques</p>
+</header>
 
-<h1>Freelance & Services numériques</h1>
+<main class="container">
 
-<p>
-Fadel Commerce propose des services indépendants et des solutions
-numériques destinés aux particuliers, entrepreneurs et petites entreprises.
-</p>
+<section class="intro">
+    <span class="badge">COMMERCE & SERVICES</span>
+    <h2>Bienvenue chez Fadel Commerce</h2>
+    <p>
+        Fadel Commerce développe des activités commerciales et numériques :
+        approvisionnement en produits agricoles, mise en relation commerciale,
+        création de boutiques e-commerce, automatisation et développement de bots Telegram.
+    </p>
+    <p>
+        Pour connaître les disponibilités, les volumes et les tarifs,
+        contactez-nous directement.
+    </p>
+</section>
 
-<h2>Nos services</h2>
-<ul>
-<li>Services freelance</li>
-<li>Assistance numérique</li>
-<li>Recherche et collecte d'informations en ligne</li>
-<li>Commerce de produits et services</li>
-<li>Services numériques à distance</li>
-</ul>
+<section>
+    <h2>🌱 Produits agricoles</h2>
 
-<h2>À propos</h2>
-<p>
-Fadel Commerce est une activité indépendante basée au Bénin,
-orientée vers le commerce et les services numériques.
-</p>
+    <div class="grid">
 
-<h2>Contact</h2>
-<p><strong>WhatsApp :</strong> +229 01 47 69 97 22</p>
-<p><strong>Email :</strong> fadelallagbe02@gmail.com</p>
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=900&q=80" alt="Soja">
+            <div class="card-content">
+                <h3>Soja</h3>
+                <p>
+                    Achat et vente de soja. Recherche de fournisseurs,
+                    acheteurs et possibilités d'approvisionnement selon les volumes.
+                </p>
+                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20soja.">
+                    Demander un devis
+                </a>
+            </div>
+        </article>
 
-<a class="button" href="mailto:fadelallagbe02@gmail.com">
-Nous contacter
-</a>
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1606851094655-b259c1f2b1d6?auto=format&fit=crop&w=900&q=80" alt="Karité">
+            <div class="card-content">
+                <h3>Karité</h3>
+                <p>
+                    Achat et vente de produits issus du karité.
+                    Disponibilité et conditions commerciales sur demande.
+                </p>
+                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20karit%C3%A9.">
+                    Demander un devis
+                </a>
+            </div>
+        </article>
 
-</div>
-</div>
+        <article class="card">
+            <img src="https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?auto=format&fit=crop&w=900&q=80" alt="Noix de cajou">
+            <div class="card-content">
+                <h3>Acajou / Anacarde</h3>
+                <p>
+                    Achat et vente d'anacarde et recherche de partenaires
+                    commerciaux selon les besoins.
+                </p>
+                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27anacarde.">
+                    Demander un devis
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="services">
+    <h2>💻 Nos solutions numériques</h2>
+
+    <div class="grid">
+
+        <article class="card">
+            <div class="card-content">
+                <h3>🛒 Création de e-commerce</h3>
+                <p>
+                    Création de boutiques en ligne, catalogue produits,
+                    commandes, paiement et présentation professionnelle.
+                </p>
+                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20veux%20cr%C3%A9er%20une%20boutique%20e-commerce.">
+                    Demander un projet
+                </a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-content">
+                <h3>🤖 Bots Telegram</h3>
+                <p>
+                    Création et automatisation de bots Telegram pour
+                    publicité, gestion de clients, commandes et services.
+                </p>
+                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20un%20bot%20Telegram.">
+                    Demander un projet
+                </a>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-content">
+                <h3>📱 Services numériques</h3>
+                <p>
+                    Assistance numérique, recherche d'informations,
+                    automatisation et solutions adaptées aux entrepreneurs.
+                </p>
+                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20veux%20en%20savoir%20plus%20sur%20vos%20services.">
+                    Nous contacter
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="contact">
+    <h2>📞 Contact</h2>
+    <p><strong>WhatsApp :</strong> +229 01 47 69 97 22</p>
+    <p><strong>Email :</strong> fadelallagbe02@gmail.com</p>
+
+    <a class="button" href="mailto:fadelallagbe02@gmail.com">
+        Nous contacter par email
+    </a>
+</section>
+
+</main>
+
+<footer>
+    © 2026 Fadel Commerce — Commerce agricole & Solutions numériques
+</footer>
+
 </body>
 </html>
