@@ -3,234 +3,532 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Fadel Commerce — Création de bots Telegram, sites web, boutiques en ligne et smart contracts.">
-<meta name="theme-color" content="#080b14">
-<title>Fadel Commerce — Digital Solutions</title>
+
+<title>Fadel Commerce | Création de sites, bots et boutiques en ligne</title>
+
+<meta name="description" content="Fadel Commerce crée des sites internet, boutiques en ligne, bots Telegram et solutions blockchain sur mesure.">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-background:#080b14;color:#f5f7ff;line-height:1.6;
-overflow-x:hidden
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
-a{text-decoration:none;color:inherit}
-.container{width:min(1120px,92%);margin:auto}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f7f9fc;
+color:#101828;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:min(1120px,92%);
+margin:auto;
+}
 
 /* HEADER */
+
 header{
-position:fixed;top:0;left:0;right:0;z-index:100;
-background:rgba(8,11,20,.78);
-backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,.07)
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:1000;
+background:rgba(255,255,255,.94);
+backdrop-filter:blur(15px);
+border-bottom:1px solid #e8ecf2;
 }
+
 .nav{
-height:72px;display:flex;align-items:center;justify-content:space-between
+height:70px;
+display:flex;
+align-items:center;
+justify-content:space-between;
 }
+
 .logo{
-font-size:1.15rem;font-weight:900;letter-spacing:-.5px
+font-size:1.15rem;
+font-weight:900;
+color:#111827;
 }
-.logo span{color:#7c5cff}
-.nav-links{display:flex;gap:25px;font-size:.9rem;color:#aeb5c7}
-.nav-links a:hover{color:white}
-.menu{display:none;font-size:1.5rem}
+
+.logo span{
+color:#635bff;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+font-size:.9rem;
+font-weight:600;
+color:#667085;
+}
+
+.nav-links a:hover{
+color:#635bff;
+}
 
 /* HERO */
+
 .hero{
-min-height:100vh;
-display:flex;align-items:center;
-padding:120px 0 70px;
-position:relative
-}
-.hero:before{
-content:"";position:absolute;width:500px;height:500px;
-background:#6246ea;filter:blur(160px);opacity:.18;
-top:5%;right:-180px
-}
-.hero-grid{
-display:grid;grid-template-columns:1.1fr .9fr;
-gap:60px;align-items:center
-}
-.badge{
-display:inline-flex;padding:8px 13px;border-radius:50px;
-background:rgba(124,92,255,.12);
-border:1px solid rgba(124,92,255,.3);
-color:#a995ff;font-size:.8rem;font-weight:700;margin-bottom:22px
-}
-h1{
-font-size:clamp(2.7rem,7vw,5.4rem);
-line-height:.98;letter-spacing:-4px;margin-bottom:25px
-}
-.gradient{
-background:linear-gradient(100deg,#fff,#a995ff,#64d8ff);
--webkit-background-clip:text;background-clip:text;color:transparent
-}
-.hero p{
-font-size:1.08rem;color:#aeb5c7;max-width:600px;margin-bottom:32px
-}
-.buttons{display:flex;gap:13px;flex-wrap:wrap}
-.btn{
-padding:13px 20px;border-radius:12px;font-weight:800;
-display:inline-flex;align-items:center;gap:8px;transition:.25s
-}
-.btn-primary{
-background:#7c5cff;box-shadow:0 10px 35px rgba(124,92,255,.25)
-}
-.btn-primary:hover{transform:translateY(-2px)}
-.btn-secondary{
-border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.04)
+padding:145px 0 90px;
+background:
+radial-gradient(circle at 80% 20%,rgba(99,91,255,.13),transparent 35%),
+linear-gradient(180deg,#fff,#f7f9fc);
 }
 
-/* HERO VISUAL */
-.visual{
-position:relative;min-height:430px;display:flex;align-items:center;justify-content:center
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
 }
-.orb{
-width:290px;height:290px;border-radius:50%;
-background:radial-gradient(circle at 35% 30%,#9d8aff,#6246ea 45%,#17102f 75%);
-box-shadow:0 0 100px rgba(124,92,255,.35);
-display:flex;align-items:center;justify-content:center;
-font-size:5rem
+
+.badge{
+display:inline-block;
+background:#eeecff;
+color:#554cff;
+padding:8px 14px;
+border-radius:30px;
+font-size:.78rem;
+font-weight:800;
+margin-bottom:20px;
 }
-.float-card{
-position:absolute;padding:15px 18px;border-radius:16px;
-background:rgba(19,24,39,.88);
-border:1px solid rgba(255,255,255,.1);
-box-shadow:0 20px 60px rgba(0,0,0,.3);
-backdrop-filter:blur(12px)
+
+h1{
+font-size:clamp(2.6rem,6vw,4.8rem);
+line-height:1.02;
+letter-spacing:-3px;
+margin-bottom:22px;
 }
-.card1{top:35px;left:0}
-.card2{right:0;top:120px}
-.card3{bottom:35px;left:35px}
-.float-title{font-size:.75rem;color:#8992a8}
-.float-value{font-weight:900;margin-top:3px}
+
+.gradient{
+color:#635bff;
+}
+
+.hero p{
+font-size:1.08rem;
+color:#667085;
+max-width:570px;
+margin-bottom:30px;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 20px;
+border-radius:10px;
+font-weight:800;
+font-size:.9rem;
+transition:.2s;
+}
+
+.btn-primary{
+background:#635bff;
+color:white;
+box-shadow:0 10px 25px rgba(99,91,255,.22);
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+}
+
+.btn-secondary{
+background:white;
+border:1px solid #dfe3eb;
+}
+
+.btn-secondary:hover{
+border-color:#635bff;
+}
+
+/* HERO MOCKUP */
+
+.hero-image{
+background:white;
+border:1px solid #e5e7eb;
+border-radius:24px;
+padding:18px;
+box-shadow:0 25px 70px rgba(16,24,40,.12);
+}
+
+.browser{
+border-radius:16px;
+overflow:hidden;
+border:1px solid #e6e8ed;
+}
+
+.browser-top{
+height:38px;
+background:#f2f4f7;
+display:flex;
+align-items:center;
+gap:6px;
+padding:0 12px;
+}
+
+.dot{
+width:8px;
+height:8px;
+border-radius:50%;
+background:#cbd0d8;
+}
+
+.browser-body{
+padding:30px;
+min-height:310px;
+background:linear-gradient(135deg,#635bff,#817aff);
+color:white;
+}
+
+.browser-body h3{
+font-size:1.8rem;
+margin-bottom:12px;
+}
+
+.browser-body p{
+color:rgba(255,255,255,.82);
+font-size:.9rem;
+}
+
+.mock-buttons{
+display:flex;
+gap:8px;
+margin-top:25px;
+}
+
+.mock-btn{
+padding:10px 13px;
+background:rgba(255,255,255,.18);
+border-radius:8px;
+font-size:.72rem;
+font-weight:bold;
+}
 
 /* SECTIONS */
-section{padding:100px 0}
-.section-head{text-align:center;margin-bottom:55px}
-.eyebrow{
-color:#917cff;text-transform:uppercase;letter-spacing:2px;
-font-size:.72rem;font-weight:900;margin-bottom:10px
+
+section{
+padding:90px 0;
 }
-h2{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-2px}
-.section-head p{color:#929bb0;max-width:600px;margin:14px auto 0}
+
+.section-head{
+text-align:center;
+max-width:700px;
+margin:0 auto 50px;
+}
+
+.small-title{
+color:#635bff;
+font-size:.75rem;
+font-weight:900;
+text-transform:uppercase;
+letter-spacing:1.5px;
+margin-bottom:10px;
+}
+
+h2{
+font-size:clamp(2rem,4vw,3rem);
+letter-spacing:-1.5px;
+line-height:1.1;
+margin-bottom:15px;
+}
+
+.section-head p{
+color:#667085;
+}
 
 /* SERVICES */
+
 .services{
-display:grid;grid-template-columns:repeat(4,1fr);gap:17px
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
 }
+
 .service{
-padding:28px 23px;border-radius:20px;
-background:linear-gradient(145deg,#111727,#0d111d);
-border:1px solid rgba(255,255,255,.07);
-transition:.3s;position:relative;overflow:hidden
+background:white;
+border:1px solid #e5e7eb;
+border-radius:20px;
+padding:30px;
+transition:.25s;
 }
+
 .service:hover{
-transform:translateY(-7px);
-border-color:rgba(124,92,255,.45)
-}
-.icon{
-font-size:2.1rem;margin-bottom:20px
-}
-.service h3{font-size:1.08rem;margin-bottom:10px}
-.service p{font-size:.88rem;color:#8f98ac}
-.service a{
-display:inline-block;margin-top:20px;color:#a995ff;font-size:.82rem;font-weight:800
+transform:translateY(-5px);
+box-shadow:0 20px 45px rgba(16,24,40,.08);
 }
 
-/* SHOWCASE */
-.showcase{
-display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+.service-top{
+display:flex;
+align-items:center;
+gap:15px;
+margin-bottom:18px;
 }
-.project{
-min-height:260px;border-radius:22px;overflow:hidden;
-background:#111727;border:1px solid rgba(255,255,255,.07);
-position:relative
+
+.service-icon{
+width:55px;
+height:55px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:1.8rem;
+background:#f0efff;
+border-radius:14px;
 }
-.project-art{
-height:180px;display:flex;align-items:center;justify-content:center;
+
+.service h3{
+font-size:1.15rem;
+}
+
+.service p{
+color:#667085;
+font-size:.9rem;
+margin-bottom:20px;
+}
+
+.service-example{
+background:#f7f8fa;
+border-radius:14px;
+padding:18px;
+margin-bottom:18px;
+font-size:.82rem;
+color:#475467;
+}
+
+.service-link{
+color:#635bff;
+font-weight:800;
+font-size:.85rem;
+}
+
+/* EXAMPLES */
+
+.examples{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.example{
+background:white;
+border:1px solid #e5e7eb;
+border-radius:20px;
+overflow:hidden;
+}
+
+.example-image{
+height:190px;
+display:flex;
+align-items:center;
+justify-content:center;
 font-size:4rem;
-background:radial-gradient(circle,#25204b,#101522)
+background:linear-gradient(135deg,#f0efff,#e8f5ff);
 }
-.project-info{padding:18px}
-.project-info h3{font-size:1rem}
-.project-info p{font-size:.78rem;color:#8e97aa}
 
-/* PROCESS */
-.process{
-display:grid;grid-template-columns:repeat(4,1fr);gap:18px
+.example-content{
+padding:22px;
 }
+
+.example-content h3{
+font-size:1rem;
+margin-bottom:7px;
+}
+
+.example-content p{
+font-size:.82rem;
+color:#667085;
+}
+
+/* HOW */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
 .step{
-padding:25px;border:1px solid rgba(255,255,255,.07);
-border-radius:18px;background:#0e1320
+background:white;
+border:1px solid #e5e7eb;
+border-radius:18px;
+padding:25px;
 }
-.number{color:#7c5cff;font-weight:900;font-size:.8rem;margin-bottom:15px}
-.step h3{font-size:1rem;margin-bottom:8px}
-.step p{color:#8f98ac;font-size:.82rem}
+
+.step-number{
+color:#635bff;
+font-weight:900;
+font-size:.8rem;
+margin-bottom:15px;
+}
+
+.step h3{
+font-size:1rem;
+margin-bottom:8px;
+}
+
+.step p{
+font-size:.82rem;
+color:#667085;
+}
 
 /* PAYMENT */
+
 .payment{
-display:grid;grid-template-columns:1fr 1fr;gap:30px;
-align-items:center;padding:45px;border-radius:28px;
-background:linear-gradient(135deg,#131a2c,#0e1220);
-border:1px solid rgba(255,255,255,.08)
+background:#111827;
+color:white;
+border-radius:28px;
+padding:55px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
 }
-.payment h2{margin-bottom:15px}
-.payment p{color:#9aa3b6}
-.pay-card{
-padding:28px;border-radius:20px;background:#090d17;
-border:1px solid rgba(255,255,255,.08)
+
+.payment p{
+color:#b8c0cc;
+margin-top:12px;
 }
-.pay-line{
-display:flex;justify-content:space-between;
-padding:13px 0;border-bottom:1px solid rgba(255,255,255,.06)
+
+.payment-box{
+background:white;
+color:#101828;
+border-radius:18px;
+padding:25px;
 }
-.pay-line:last-child{border:0}
-.pay-label{color:#8e97aa}
-.pay-value{font-weight:800}
+
+.payment-row{
+display:flex;
+justify-content:space-between;
+padding:13px 0;
+border-bottom:1px solid #eaecf0;
+font-size:.85rem;
+}
+
+.payment-row:last-child{
+border:0;
+}
+
 .paydunya{
-margin-top:20px;padding:12px;border-radius:10px;
-background:rgba(0,180,130,.1);color:#64e0b5;
-text-align:center;font-weight:800
+margin-top:18px;
+background:#e8fff6;
+color:#087a55;
+padding:12px;
+border-radius:9px;
+text-align:center;
+font-weight:800;
+font-size:.85rem;
 }
 
 /* CTA */
+
 .cta{
-text-align:center;padding:80px 25px;border-radius:30px;
-background:radial-gradient(circle at 50% 0,#24204c,#101522 55%);
-border:1px solid rgba(124,92,255,.2)
+text-align:center;
+background:#eeecff;
+border-radius:28px;
+padding:70px 25px;
 }
-.cta p{color:#9ca5b8;max-width:600px;margin:15px auto 28px}
+
+.cta p{
+max-width:600px;
+margin:15px auto 25px;
+color:#667085;
+}
 
 /* FOOTER */
+
 footer{
-padding:45px 0;border-top:1px solid rgba(255,255,255,.07);
-color:#7f899e;font-size:.82rem
+background:#101828;
+color:#98a2b3;
+padding:40px 0;
+font-size:.82rem;
 }
+
 .footer{
-display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
+display:flex;
+justify-content:space-between;
+gap:20px;
+flex-wrap:wrap;
 }
-.footer strong{color:white}
+
+.footer strong{
+color:white;
+}
 
 /* MOBILE */
-@media(max-width:850px){
-.nav-links{display:none}
-.menu{display:block}
-.hero-grid{grid-template-columns:1fr;gap:20px}
-.hero{padding-top:110px}
-.visual{min-height:330px}
-.services{grid-template-columns:1fr 1fr}
-.showcase{grid-template-columns:1fr}
-.process{grid-template-columns:1fr 1fr}
-.payment{grid-template-columns:1fr;padding:28px}
+
+@media(max-width:800px){
+
+.nav-links{
+display:none;
 }
-@media(max-width:520px){
-h1{letter-spacing:-2.5px}
-.services,.process{grid-template-columns:1fr}
-.visual{transform:scale(.88)}
-.card1{left:-5px}.card2{right:-5px}
-section{padding:75px 0}
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding-top:120px;
+}
+
+.services{
+grid-template-columns:1fr;
+}
+
+.examples{
+grid-template-columns:1fr;
+}
+
+.steps{
+grid-template-columns:1fr 1fr;
+}
+
+.payment{
+grid-template-columns:1fr;
+padding:30px;
+}
+
+}
+
+@media(max-width:500px){
+
+h1{
+letter-spacing:-2px;
+}
+
+.steps{
+grid-template-columns:1fr;
+}
+
+section{
+padding:70px 0;
+}
+
+.hero-image{
+margin-top:10px;
+}
+
+.browser-body{
+min-height:250px;
+padding:22px;
+}
+
 }
 </style>
 </head>
@@ -239,244 +537,560 @@ section{padding:75px 0}
 
 <header>
 <div class="container nav">
-<a href="#" class="logo">FADEL<span>COMMERCE</span></a>
+
+<a href="#" class="logo">
+FADEL<span>COMMERCE</span>
+</a>
+
 <nav class="nav-links">
 <a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#process">Processus</a>
+<a href="#exemples">Exemples</a>
+<a href="#fonctionnement">Comment ça marche</a>
 <a href="#contact">Contact</a>
 </nav>
-<div class="menu">☰</div>
+
 </div>
 </header>
+
 
 <main>
 
 <!-- HERO -->
+
 <section class="hero">
+
 <div class="container hero-grid">
 
 <div>
-<div class="badge">✦ DIGITAL SOLUTIONS</div>
+
+<div class="badge">
+💻 CRÉATION DE SOLUTIONS NUMÉRIQUES
+</div>
 
 <h1>
-Transformons vos
-<span class="gradient">idées</span>
-en solutions digitales.
+Vous avez une idée ?
+<span class="gradient">Je la transforme en réalité.</span>
 </h1>
 
 <p>
-Je conçois des solutions numériques modernes et sur mesure :
-bots Telegram, sites web, boutiques en ligne et smart contracts.
+Je crée pour vous des sites internet, boutiques en ligne,
+bots Telegram et solutions blockchain adaptés à votre projet.
 </p>
 
 <div class="buttons">
-<a href="#contact" class="btn btn-primary">Démarrer un projet →</a>
-<a href="#services" class="btn btn-secondary">Découvrir les services</a>
-</div>
-</div>
 
-<div class="visual">
-<div class="orb">⚡</div>
+<a href="#contact" class="btn btn-primary">
+🚀 Démarrer mon projet
+</a>
 
-<div class="float-card card1">
-<div class="float-title">AUTOMATION</div>
-<div class="float-value">Telegram Bot 🤖</div>
-</div>
+<a href="#services" class="btn btn-secondary">
+Voir les services
+</a>
 
-<div class="float-card card2">
-<div class="float-title">WEB</div>
-<div class="float-value">Modern Website 🌐</div>
-</div>
-
-<div class="float-card card3">
-<div class="float-title">BLOCKCHAIN</div>
-<div class="float-value">Smart Contract ⛓️</div>
-</div>
 </div>
 
 </div>
+
+
+<div class="hero-image">
+
+<div class="browser">
+
+<div class="browser-top">
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+</div>
+
+<div class="browser-body">
+
+<h3>
+Votre projet numérique.
+</h3>
+
+<p>
+Site web • Bot Telegram • Boutique • Blockchain
+</p>
+
+<div class="mock-buttons">
+<div class="mock-btn">Commander</div>
+<div class="mock-btn">Payer</div>
+<div class="mock-btn">Contacter</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
+
 <!-- SERVICES -->
+
 <section id="services">
+
 <div class="container">
+
 <div class="section-head">
-<div class="eyebrow">Ce que je fais</div>
-<h2>Des solutions conçues pour vos projets.</h2>
-<p>De l'idée au produit final, je transforme vos besoins en outils digitaux fonctionnels.</p>
+
+<div class="small-title">
+Mes services
 </div>
+
+<h2>
+Qu'est-ce que je peux créer pour vous ?
+</h2>
+
+<p>
+Pas besoin d'être informaticien. Expliquez simplement ce dont vous avez besoin.
+</p>
+
+</div>
+
 
 <div class="services">
 
-<article class="service">
-<div class="icon">🤖</div>
-<h3>Bots Telegram</h3>
-<p>Bots personnalisés pour automatiser vos ventes, notifications, communautés et services.</p>
-<a href="#contact">Créer mon bot →</a>
-</article>
 
 <article class="service">
-<div class="icon">🌐</div>
-<h3>Sites web</h3>
-<p>Sites modernes, rapides, responsives et adaptés à votre activité ou votre marque.</p>
-<a href="#contact">Créer mon site →</a>
-</article>
 
-<article class="service">
-<div class="icon">⛓️</div>
-<h3>Smart Contracts</h3>
-<p>Développement de smart contracts et solutions blockchain avec Solidity.</p>
-<a href="#contact">Parler du projet →</a>
-</article>
+<div class="service-top">
 
-<article class="service">
-<div class="icon">🛒</div>
-<h3>Boutiques en ligne</h3>
-<p>Création de plateformes e-commerce avec catalogue, commandes et paiements.</p>
-<a href="#contact">Créer ma boutique →</a>
-</article>
+<div class="service-icon">
+🤖
+</div>
+
+<h3>
+Bot Telegram personnalisé
+</h3>
 
 </div>
+
+<p>
+Je crée un robot Telegram capable de travailler automatiquement pour vous.
+</p>
+
+<div class="service-example">
+<strong>Exemples :</strong><br>
+Bot de vente • Bot de paiement • Bot de notification • Bot pour groupe
 </div>
+
+<a href="#contact" class="service-link">
+Demander ce service →
+</a>
+
+</article>
+
+
+<article class="service">
+
+<div class="service-top">
+
+<div class="service-icon">
+🌐
+</div>
+
+<h3>
+Création de site internet
+</h3>
+
+</div>
+
+<p>
+Je crée un site professionnel pour présenter votre entreprise, activité ou projet.
+</p>
+
+<div class="service-example">
+<strong>Exemples :</strong><br>
+Site vitrine • Portfolio • Landing page • Plateforme web
+</div>
+
+<a href="#contact" class="service-link">
+Demander ce service →
+</a>
+
+</article>
+
+
+<article class="service">
+
+<div class="service-top">
+
+<div class="service-icon">
+🛒
+</div>
+
+<h3>
+Boutique en ligne
+</h3>
+
+</div>
+
+<p>
+Je crée une boutique permettant à vos clients de voir vos produits et de commander en ligne.
+</p>
+
+<div class="service-example">
+<strong>Exemples :</strong><br>
+Catalogue • Panier • Commandes • Paiement en ligne
+</div>
+
+<a href="#contact" class="service-link">
+Créer ma boutique →
+</a>
+
+</article>
+
+
+<article class="service">
+
+<div class="service-top">
+
+<div class="service-icon">
+⛓️
+</div>
+
+<h3>
+Solution blockchain
+</h3>
+
+</div>
+
+<p>
+Vous avez un projet crypto ou blockchain ? Je peux développer votre contrat intelligent.
+</p>
+
+<div class="service-example">
+<strong>Exemples :</strong><br>
+Smart Contract • Token • Projet Web3 • Automatisation blockchain
+</div>
+
+<a href="#contact" class="service-link">
+Parler de mon projet →
+</a>
+
+</article>
+
+
+</div>
+
+</div>
+
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio">
+
+<!-- EXEMPLES -->
+
+<section id="exemples">
+
 <div class="container">
+
 <div class="section-head">
-<div class="eyebrow">Portfolio</div>
-<h2>Quelques projets.</h2>
-<p>Des concepts et solutions développés autour de l'automatisation, du web et de la blockchain.</p>
+
+<div class="small-title">
+Exemples
 </div>
 
-<div class="showcase">
+<h2>
+Voici ce que vous pouvez obtenir.
+</h2>
 
-<div class="project">
-<div class="project-art">🤖</div>
-<div class="project-info">
-<h3>Telegram Automation</h3>
-<p>Bot personnalisé & automatisation</p>
-</div>
-</div>
-
-<div class="project">
-<div class="project-art">📊</div>
-<div class="project-info">
-<h3>SPORT AI ENGINE</h3>
-<p>Analyse et automatisation sportive</p>
-</div>
-</div>
-
-<div class="project">
-<div class="project-art">⛓️</div>
-<div class="project-info">
-<h3>Blockchain Solutions</h3>
-<p>Smart contracts & tokens</p>
-</div>
-</div>
+<p>
+Des solutions pensées pour être simples à utiliser et adaptées à votre activité.
+</p>
 
 </div>
+
+
+<div class="examples">
+
+
+<div class="example">
+
+<div class="example-image">
+🤖
 </div>
+
+<div class="example-content">
+
+<h3>
+Un bot Telegram
+</h3>
+
+<p>
+Vos clients peuvent discuter avec votre bot, recevoir des informations,
+passer une commande ou effectuer certaines actions automatiquement.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="example">
+
+<div class="example-image">
+🌐
+</div>
+
+<div class="example-content">
+
+<h3>
+Un site professionnel
+</h3>
+
+<p>
+Une présence en ligne claire pour présenter votre entreprise,
+vos services, vos réalisations et vos coordonnées.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="example">
+
+<div class="example-image">
+🛒
+</div>
+
+<div class="example-content">
+
+<h3>
+Une boutique en ligne
+</h3>
+
+<p>
+Vos produits sont présentés sur Internet et vos clients peuvent
+commander directement depuis leur téléphone.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
+
 
 <!-- PROCESS -->
-<section id="process">
+
+<section id="fonctionnement">
+
 <div class="container">
+
 <div class="section-head">
-<div class="eyebrow">Méthode</div>
-<h2>Simple. Rapide. Professionnel.</h2>
+
+<div class="small-title">
+Comment ça marche ?
 </div>
 
-<div class="process">
+<h2>
+Simple, même si vous n'êtes pas informaticien.
+</h2>
 
-<div class="step">
-<div class="number">01 — BESOIN</div>
-<h3>Vous expliquez votre idée</h3>
-<p>Vous présentez votre projet et vos objectifs.</p>
 </div>
 
-<div class="step">
-<div class="number">02 — SOLUTION</div>
-<h3>Nous définissons le projet</h3>
-<p>Fonctionnalités, budget et délai sont définis.</p>
-</div>
+
+<div class="steps">
+
 
 <div class="step">
-<div class="number">03 — DÉVELOPPEMENT</div>
-<h3>Je construis votre solution</h3>
-<p>Développement, tests et améliorations.</p>
+
+<div class="step-number">
+01 — VOTRE IDÉE
 </div>
+
+<h3>
+Vous expliquez
+</h3>
+
+<p>
+Dites-moi simplement ce que vous voulez créer.
+</p>
+
+</div>
+
 
 <div class="step">
-<div class="number">04 — LIVRAISON</div>
-<h3>Votre projet est livré</h3>
-<p>Vous recevez votre solution prête à utiliser.</p>
+
+<div class="step-number">
+02 — DEVIS
+</div>
+
+<h3>
+Nous définissons le prix
+</h3>
+
+<p>
+Je vous propose une solution et un tarif adapté.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+03 — PAIEMENT
+</div>
+
+<h3>
+Vous payez
+</h3>
+
+<p>
+L'acompte peut être payé en ligne via PayDunya.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+04 — LIVRAISON
+</div>
+
+<h3>
+Je réalise votre projet
+</h3>
+
+<p>
+Après développement et tests, votre solution vous est livrée.
+</p>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
+
 <!-- PAYMENT -->
+
 <section>
+
 <div class="container">
+
 <div class="payment">
 
 <div>
-<div class="eyebrow">Paiement sécurisé</div>
-<h2>Payez simplement en ligne.</h2>
+
+<div class="small-title">
+Paiement en ligne
+</div>
+
+<h2>
+Commandez votre service simplement.
+</h2>
+
 <p>
-Pour les prestations commandées sur la plateforme,
-le paiement pourra être effectué via PayDunya.
+Les prestations proposées sur ce site pourront être réglées
+en ligne grâce à PayDunya.
 </p>
-</div>
-
-<div class="pay-card">
-<div class="pay-line">
-<span class="pay-label">Service</span>
-<span class="pay-value">Votre projet</span>
-</div>
-<div class="pay-line">
-<span class="pay-label">Paiement</span>
-<span class="pay-value">Acompte</span>
-</div>
-<div class="pay-line">
-<span class="pay-label">Statut</span>
-<span class="pay-value">Sécurisé</span>
-</div>
-<div class="paydunya">✓ Paiement via PayDunya</div>
-</div>
 
 </div>
+
+
+<div class="payment-box">
+
+<div class="payment-row">
+<span>Service choisi</span>
+<strong>Votre projet</strong>
 </div>
+
+<div class="payment-row">
+<span>Type</span>
+<strong>Prestation numérique</strong>
+</div>
+
+<div class="payment-row">
+<span>Paiement</span>
+<strong>En ligne</strong>
+</div>
+
+<div class="paydunya">
+✓ Paiement sécurisé avec PayDunya
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- CTA -->
+
+<!-- CONTACT -->
+
 <section id="contact">
+
 <div class="container">
+
 <div class="cta">
-<div class="eyebrow">Un projet en tête ?</div>
-<h2>Construisons-le ensemble.</h2>
+
+<div class="small-title">
+Votre projet
+</div>
+
+<h2>
+Parlons de votre idée.
+</h2>
+
 <p>
-Décrivez-moi votre projet et je vous proposerai une solution adaptée à vos besoins.
+Vous avez besoin d'un site, d'un bot Telegram, d'une boutique
+ou d'une solution blockchain ? Expliquez-moi votre projet.
 </p>
 
 <div class="buttons" style="justify-content:center">
-<a href="https://t.me/" class="btn btn-primary">💬 Telegram</a>
-<a href="https://wa.me/" class="btn btn-secondary">WhatsApp</a>
+
+<a href="https://t.me/" class="btn btn-primary">
+💬 Me contacter sur Telegram
+</a>
+
+<a href="https://wa.me/" class="btn btn-secondary">
+WhatsApp
+</a>
+
 </div>
+
 </div>
+
 </div>
+
 </section>
 
 </main>
 
+
 <footer>
+
 <div class="container footer">
-<div><strong>FADEL COMMERCE</strong> — Digital Solutions</div>
-<div>© 2026 Tous droits réservés.</div>
+
+<div>
+<strong>FADEL COMMERCE</strong><br>
+Création de solutions numériques.
 </div>
+
+<div>
+© 2026 Fadel Commerce — Tous droits réservés.
+</div>
+
+</div>
+
 </footer>
 
 </body>
