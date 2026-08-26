@@ -4,32 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fadel Commerce | Création de sites, bots et boutiques en ligne</title>
+<title>Fadel Commerce — Création de sites, bots et boutiques en ligne</title>
 
 <meta name="description" content="Fadel Commerce crée des sites internet, boutiques en ligne, bots Telegram et solutions blockchain sur mesure.">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f7f9fc;
+font-family:Inter,Arial,sans-serif;
+background:#f7f8fc;
 color:#101828;
 line-height:1.6;
 }
 
-a{
-text-decoration:none;
-color:inherit;
-}
+a{text-decoration:none;color:inherit}
 
 .container{
 width:min(1120px,92%);
@@ -44,9 +35,9 @@ top:0;
 left:0;
 right:0;
 z-index:1000;
-background:rgba(255,255,255,.94);
+background:rgba(255,255,255,.95);
 backdrop-filter:blur(15px);
-border-bottom:1px solid #e8ecf2;
+border-bottom:1px solid #e5e7eb;
 }
 
 .nav{
@@ -57,69 +48,63 @@ justify-content:space-between;
 }
 
 .logo{
-font-size:1.15rem;
+font-size:1.1rem;
 font-weight:900;
-color:#111827;
+letter-spacing:-.5px;
 }
 
-.logo span{
-color:#635bff;
-}
+.logo span{color:#635bff}
 
 .nav-links{
 display:flex;
 gap:25px;
-font-size:.9rem;
-font-weight:600;
+font-size:.88rem;
+font-weight:700;
 color:#667085;
 }
 
-.nav-links a:hover{
-color:#635bff;
-}
+.nav-links a:hover{color:#635bff}
 
 /* HERO */
 
 .hero{
 padding:145px 0 90px;
 background:
-radial-gradient(circle at 80% 20%,rgba(99,91,255,.13),transparent 35%),
-linear-gradient(180deg,#fff,#f7f9fc);
+radial-gradient(circle at 85% 20%,rgba(99,91,255,.15),transparent 35%),
+linear-gradient(180deg,#fff,#f7f8fc);
 }
 
 .hero-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:60px;
+gap:55px;
 align-items:center;
 }
 
 .badge{
 display:inline-block;
-background:#eeecff;
-color:#554cff;
 padding:8px 14px;
 border-radius:30px;
-font-size:.78rem;
-font-weight:800;
+background:#eeecff;
+color:#5146d8;
+font-size:.75rem;
+font-weight:900;
 margin-bottom:20px;
 }
 
 h1{
-font-size:clamp(2.6rem,6vw,4.8rem);
+font-size:clamp(2.6rem,6vw,4.7rem);
 line-height:1.02;
 letter-spacing:-3px;
 margin-bottom:22px;
 }
 
-.gradient{
-color:#635bff;
-}
+.gradient{color:#635bff}
 
 .hero p{
-font-size:1.08rem;
+font-size:1.05rem;
 color:#667085;
-max-width:570px;
+max-width:590px;
 margin-bottom:30px;
 }
 
@@ -130,53 +115,49 @@ flex-wrap:wrap;
 }
 
 .btn{
+padding:14px 19px;
+border-radius:11px;
+font-weight:800;
+font-size:.88rem;
 display:inline-flex;
 align-items:center;
 justify-content:center;
-padding:14px 20px;
-border-radius:10px;
-font-weight:800;
-font-size:.9rem;
 transition:.2s;
 }
 
 .btn-primary{
 background:#635bff;
 color:white;
-box-shadow:0 10px 25px rgba(99,91,255,.22);
+box-shadow:0 10px 25px rgba(99,91,255,.2);
 }
 
-.btn-primary:hover{
-transform:translateY(-2px);
-}
+.btn-primary:hover{transform:translateY(-2px)}
 
 .btn-secondary{
 background:white;
-border:1px solid #dfe3eb;
+border:1px solid #dfe3ea;
 }
 
-.btn-secondary:hover{
-border-color:#635bff;
-}
+.btn-secondary:hover{border-color:#635bff}
 
 /* HERO MOCKUP */
 
-.hero-image{
+.hero-visual{
 background:white;
 border:1px solid #e5e7eb;
+padding:16px;
 border-radius:24px;
-padding:18px;
-box-shadow:0 25px 70px rgba(16,24,40,.12);
+box-shadow:0 25px 70px rgba(16,24,40,.1);
 }
 
 .browser{
-border-radius:16px;
 overflow:hidden;
-border:1px solid #e6e8ed;
+border-radius:15px;
+border:1px solid #e5e7eb;
 }
 
 .browser-top{
-height:38px;
+height:36px;
 background:#f2f4f7;
 display:flex;
 align-items:center;
@@ -187,46 +168,47 @@ padding:0 12px;
 .dot{
 width:8px;
 height:8px;
-border-radius:50%;
 background:#cbd0d8;
+border-radius:50%;
 }
 
 .browser-body{
-padding:30px;
 min-height:310px;
-background:linear-gradient(135deg,#635bff,#817aff);
+padding:30px;
+background:linear-gradient(135deg,#635bff,#827aff);
 color:white;
 }
 
 .browser-body h3{
 font-size:1.8rem;
+line-height:1.1;
 margin-bottom:12px;
 }
 
 .browser-body p{
-color:rgba(255,255,255,.82);
+color:rgba(255,255,255,.85);
 font-size:.9rem;
 }
 
-.mock-buttons{
-display:flex;
-gap:8px;
+.mock-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
 margin-top:25px;
 }
 
-.mock-btn{
-padding:10px 13px;
-background:rgba(255,255,255,.18);
-border-radius:8px;
-font-size:.72rem;
-font-weight:bold;
+.mock-card{
+background:rgba(255,255,255,.15);
+border:1px solid rgba(255,255,255,.2);
+padding:15px;
+border-radius:12px;
+font-size:.8rem;
+font-weight:700;
 }
 
-/* SECTIONS */
+/* SECTION */
 
-section{
-padding:90px 0;
-}
+section{padding:90px 0}
 
 .section-head{
 text-align:center;
@@ -236,7 +218,7 @@ margin:0 auto 50px;
 
 .small-title{
 color:#635bff;
-font-size:.75rem;
+font-size:.72rem;
 font-weight:900;
 text-transform:uppercase;
 letter-spacing:1.5px;
@@ -245,9 +227,9 @@ margin-bottom:10px;
 
 h2{
 font-size:clamp(2rem,4vw,3rem);
-letter-spacing:-1.5px;
 line-height:1.1;
-margin-bottom:15px;
+letter-spacing:-1.5px;
+margin-bottom:14px;
 }
 
 .section-head p{
@@ -265,57 +247,124 @@ gap:20px;
 .service{
 background:white;
 border:1px solid #e5e7eb;
-border-radius:20px;
+border-radius:22px;
 padding:30px;
 transition:.25s;
 }
 
 .service:hover{
 transform:translateY(-5px);
-box-shadow:0 20px 45px rgba(16,24,40,.08);
+box-shadow:0 20px 50px rgba(16,24,40,.08);
 }
 
-.service-top{
+.service-head{
 display:flex;
-align-items:center;
 gap:15px;
-margin-bottom:18px;
+align-items:center;
+margin-bottom:17px;
 }
 
 .service-icon{
-width:55px;
-height:55px;
+width:58px;
+height:58px;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:1.8rem;
 background:#f0efff;
-border-radius:14px;
+border-radius:15px;
+font-size:1.8rem;
 }
 
-.service h3{
-font-size:1.15rem;
-}
+.service h3{font-size:1.15rem}
 
 .service p{
+font-size:.88rem;
 color:#667085;
-font-size:.9rem;
+margin-bottom:17px;
+}
+
+.example{
+padding:15px;
+background:#f7f8fa;
+border-radius:13px;
+font-size:.82rem;
+color:#475467;
 margin-bottom:20px;
 }
 
-.service-example{
-background:#f7f8fa;
-border-radius:14px;
-padding:18px;
+.price{
 margin-bottom:18px;
-font-size:.82rem;
-color:#475467;
 }
 
-.service-link{
-color:#635bff;
-font-weight:800;
+.old-price{
+color:#98a2b3;
+text-decoration:line-through;
 font-size:.85rem;
+}
+
+.promo{
+font-size:1.45rem;
+font-weight:900;
+color:#635bff;
+}
+
+.promo-label{
+display:inline-block;
+margin-left:7px;
+padding:4px 8px;
+border-radius:5px;
+background:#fff0f0;
+color:#e5484d;
+font-size:.65rem;
+font-weight:900;
+vertical-align:middle;
+}
+
+/* PACKAGES */
+
+.packages{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.package{
+background:white;
+border:1px solid #e5e7eb;
+border-radius:20px;
+padding:25px;
+}
+
+.package.featured{
+border:2px solid #635bff;
+}
+
+.package h3{
+margin-bottom:8px;
+}
+
+.package p{
+color:#667085;
+font-size:.82rem;
+margin-bottom:18px;
+}
+
+.package-price{
+font-size:1.4rem;
+font-weight:900;
+color:#635bff;
+margin-bottom:18px;
+}
+
+.package ul{
+list-style:none;
+font-size:.82rem;
+color:#475467;
+margin-bottom:20px;
+}
+
+.package li{
+margin:8px 0;
 }
 
 /* EXAMPLES */
@@ -326,7 +375,7 @@ grid-template-columns:repeat(3,1fr);
 gap:20px;
 }
 
-.example{
+.example-card{
 background:white;
 border:1px solid #e5e7eb;
 border-radius:20px;
@@ -339,7 +388,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 font-size:4rem;
-background:linear-gradient(135deg,#f0efff,#e8f5ff);
+background:linear-gradient(135deg,#eeecff,#e8f7ff);
 }
 
 .example-content{
@@ -356,7 +405,7 @@ font-size:.82rem;
 color:#667085;
 }
 
-/* HOW */
+/* PROCESS */
 
 .steps{
 display:grid;
@@ -372,15 +421,15 @@ padding:25px;
 }
 
 .step-number{
-color:#635bff;
+font-size:.72rem;
 font-weight:900;
-font-size:.8rem;
-margin-bottom:15px;
+color:#635bff;
+margin-bottom:13px;
 }
 
 .step h3{
 font-size:1rem;
-margin-bottom:8px;
+margin-bottom:7px;
 }
 
 .step p{
@@ -388,67 +437,28 @@ font-size:.82rem;
 color:#667085;
 }
 
-/* PAYMENT */
+/* CONTACT */
 
-.payment{
+.contact-box{
 background:#111827;
 color:white;
 border-radius:28px;
 padding:55px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
+text-align:center;
 }
 
-.payment p{
+.contact-box h2{margin-bottom:10px}
+
+.contact-box p{
 color:#b8c0cc;
-margin-top:12px;
+max-width:650px;
+margin:0 auto 25px;
 }
 
-.payment-box{
-background:white;
-color:#101828;
-border-radius:18px;
-padding:25px;
-}
-
-.payment-row{
-display:flex;
-justify-content:space-between;
-padding:13px 0;
-border-bottom:1px solid #eaecf0;
-font-size:.85rem;
-}
-
-.payment-row:last-child{
-border:0;
-}
-
-.paydunya{
+.contact-note{
+font-size:.78rem;
+color:#98a2b3;
 margin-top:18px;
-background:#e8fff6;
-color:#087a55;
-padding:12px;
-border-radius:9px;
-text-align:center;
-font-weight:800;
-font-size:.85rem;
-}
-
-/* CTA */
-
-.cta{
-text-align:center;
-background:#eeecff;
-border-radius:28px;
-padding:70px 25px;
-}
-
-.cta p{
-max-width:600px;
-margin:15px auto 25px;
-color:#667085;
 }
 
 /* FOOTER */
@@ -457,7 +467,7 @@ footer{
 background:#101828;
 color:#98a2b3;
 padding:40px 0;
-font-size:.82rem;
+font-size:.8rem;
 }
 
 .footer{
@@ -467,27 +477,23 @@ gap:20px;
 flex-wrap:wrap;
 }
 
-.footer strong{
-color:white;
-}
+.footer strong{color:white}
 
 /* MOBILE */
 
 @media(max-width:800px){
 
-.nav-links{
-display:none;
-}
+.nav-links{display:none}
 
 .hero-grid{
 grid-template-columns:1fr;
 }
 
-.hero{
-padding-top:120px;
+.services{
+grid-template-columns:1fr;
 }
 
-.services{
+.packages{
 grid-template-columns:1fr;
 }
 
@@ -499,14 +505,13 @@ grid-template-columns:1fr;
 grid-template-columns:1fr 1fr;
 }
 
-.payment{
-grid-template-columns:1fr;
-padding:30px;
-}
-
 }
 
 @media(max-width:500px){
+
+.hero{
+padding-top:120px;
+}
 
 h1{
 letter-spacing:-2px;
@@ -516,17 +521,17 @@ letter-spacing:-2px;
 grid-template-columns:1fr;
 }
 
-section{
-padding:70px 0;
-}
-
-.hero-image{
-margin-top:10px;
+.contact-box{
+padding:35px 20px;
 }
 
 .browser-body{
-min-height:250px;
+min-height:270px;
 padding:22px;
+}
+
+section{
+padding:70px 0;
 }
 
 }
@@ -544,8 +549,8 @@ FADEL<span>COMMERCE</span>
 
 <nav class="nav-links">
 <a href="#services">Services</a>
+<a href="#tarifs">Tarifs</a>
 <a href="#exemples">Exemples</a>
-<a href="#fonctionnement">Comment ça marche</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -569,22 +574,24 @@ FADEL<span>COMMERCE</span>
 
 <h1>
 Vous avez une idée ?
+<br>
 <span class="gradient">Je la transforme en réalité.</span>
 </h1>
 
 <p>
-Je crée pour vous des sites internet, boutiques en ligne,
-bots Telegram et solutions blockchain adaptés à votre projet.
+Je crée des sites internet, des boutiques en ligne,
+des bots Telegram et des solutions blockchain pour
+les particuliers, entrepreneurs et entreprises.
 </p>
 
 <div class="buttons">
 
-<a href="#contact" class="btn btn-primary">
-🚀 Démarrer mon projet
+<a href="https://wa.me/22947699722" class="btn btn-primary">
+💬 Discuter sur WhatsApp
 </a>
 
-<a href="#services" class="btn btn-secondary">
-Voir les services
+<a href="https://t.me/fadeltelegram" class="btn btn-secondary">
+✈️ Telegram
 </a>
 
 </div>
@@ -592,7 +599,7 @@ Voir les services
 </div>
 
 
-<div class="hero-image">
+<div class="hero-visual">
 
 <div class="browser">
 
@@ -609,13 +616,16 @@ Votre projet numérique.
 </h3>
 
 <p>
-Site web • Bot Telegram • Boutique • Blockchain
+Je crée l'outil dont votre activité a besoin.
 </p>
 
-<div class="mock-buttons">
-<div class="mock-btn">Commander</div>
-<div class="mock-btn">Payer</div>
-<div class="mock-btn">Contacter</div>
+<div class="mock-grid">
+
+<div class="mock-card">🤖 Bot Telegram</div>
+<div class="mock-card">🌐 Site web</div>
+<div class="mock-card">🛒 Boutique</div>
+<div class="mock-card">⛓️ Blockchain</div>
+
 </div>
 
 </div>
@@ -637,16 +647,15 @@ Site web • Bot Telegram • Boutique • Blockchain
 
 <div class="section-head">
 
-<div class="small-title">
-Mes services
-</div>
+<div class="small-title">Mes services</div>
 
 <h2>
 Qu'est-ce que je peux créer pour vous ?
 </h2>
 
 <p>
-Pas besoin d'être informaticien. Expliquez simplement ce dont vous avez besoin.
+Vous n'avez pas besoin de connaître la programmation.
+Expliquez simplement votre idée.
 </p>
 
 </div>
@@ -657,29 +666,35 @@ Pas besoin d'être informaticien. Expliquez simplement ce dont vous avez besoin.
 
 <article class="service">
 
-<div class="service-top">
+<div class="service-head">
 
-<div class="service-icon">
-🤖
-</div>
+<div class="service-icon">🤖</div>
 
-<h3>
-Bot Telegram personnalisé
-</h3>
+<h3>Bot Telegram personnalisé</h3>
 
 </div>
 
 <p>
-Je crée un robot Telegram capable de travailler automatiquement pour vous.
+Un robot Telegram qui peut effectuer automatiquement
+certaines tâches pour vous ou vos clients.
 </p>
 
-<div class="service-example">
+<div class="example">
 <strong>Exemples :</strong><br>
-Bot de vente • Bot de paiement • Bot de notification • Bot pour groupe
+Bot de vente • Bot de commande • Bot de paiement •
+Bot de notification • Gestion de groupe
 </div>
 
-<a href="#contact" class="service-link">
-Demander ce service →
+<div class="price">
+<div class="old-price">Prix normal : 70 000 FCFA</div>
+<div class="promo">
+50 000 FCFA
+<span class="promo-label">PROMO</span>
+</div>
+</div>
+
+<a href="https://wa.me/22947699722" class="btn btn-primary">
+Demander ce service
 </a>
 
 </article>
@@ -687,29 +702,35 @@ Demander ce service →
 
 <article class="service">
 
-<div class="service-top">
+<div class="service-head">
 
-<div class="service-icon">
-🌐
-</div>
+<div class="service-icon">🌐</div>
 
-<h3>
-Création de site internet
-</h3>
+<h3>Création de site internet</h3>
 
 </div>
 
 <p>
-Je crée un site professionnel pour présenter votre entreprise, activité ou projet.
+Un site professionnel pour présenter votre entreprise,
+votre activité, vos services ou votre projet.
 </p>
 
-<div class="service-example">
+<div class="example">
 <strong>Exemples :</strong><br>
-Site vitrine • Portfolio • Landing page • Plateforme web
+Site vitrine • Portfolio • Page professionnelle •
+Landing page
 </div>
 
-<a href="#contact" class="service-link">
-Demander ce service →
+<div class="price">
+<div class="old-price">Prix normal : 130 000 FCFA</div>
+<div class="promo">
+100 000 FCFA
+<span class="promo-label">PROMO</span>
+</div>
+</div>
+
+<a href="https://wa.me/22947699722" class="btn btn-primary">
+Demander ce service
 </a>
 
 </article>
@@ -717,29 +738,34 @@ Demander ce service →
 
 <article class="service">
 
-<div class="service-top">
+<div class="service-head">
 
-<div class="service-icon">
-🛒
-</div>
+<div class="service-icon">🛒</div>
 
-<h3>
-Boutique en ligne
-</h3>
+<h3>Boutique en ligne</h3>
 
 </div>
 
 <p>
-Je crée une boutique permettant à vos clients de voir vos produits et de commander en ligne.
+Une boutique permettant à vos clients de découvrir
+vos produits et de passer des commandes en ligne.
 </p>
 
-<div class="service-example">
+<div class="example">
 <strong>Exemples :</strong><br>
-Catalogue • Panier • Commandes • Paiement en ligne
+Catalogue • Panier • Commandes • Gestion des produits
 </div>
 
-<a href="#contact" class="service-link">
-Créer ma boutique →
+<div class="price">
+<div class="old-price">Prix normal : 250 000 FCFA</div>
+<div class="promo">
+200 000 FCFA
+<span class="promo-label">PROMO</span>
+</div>
+</div>
+
+<a href="https://wa.me/22947699722" class="btn btn-primary">
+Créer ma boutique
 </a>
 
 </article>
@@ -747,32 +773,146 @@ Créer ma boutique →
 
 <article class="service">
 
-<div class="service-top">
+<div class="service-head">
 
-<div class="service-icon">
-⛓️
-</div>
+<div class="service-icon">⛓️</div>
 
-<h3>
-Solution blockchain
-</h3>
+<h3>Smart Contract</h3>
 
 </div>
 
 <p>
-Vous avez un projet crypto ou blockchain ? Je peux développer votre contrat intelligent.
+Pour les projets crypto et blockchain qui nécessitent
+un contrat intelligent personnalisé.
 </p>
 
-<div class="service-example">
+<div class="example">
 <strong>Exemples :</strong><br>
-Smart Contract • Token • Projet Web3 • Automatisation blockchain
+Token • Smart Contract • Projet Web3 •
+Fonctions blockchain
 </div>
 
-<a href="#contact" class="service-link">
-Parler de mon projet →
+<div class="price">
+<div class="old-price">Prix normal : 200 000 FCFA</div>
+<div class="promo">
+150 000 FCFA
+<span class="promo-label">PROMO</span>
+</div>
+</div>
+
+<a href="https://wa.me/22947699722" class="btn btn-primary">
+Parler de mon projet
 </a>
 
 </article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TARIFS -->
+
+<section id="tarifs">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="small-title">Formules</div>
+
+<h2>Des offres simples à comprendre.</h2>
+
+<p>
+Les prix promotionnels concernent les projets standards.
+Les projets plus complexes sont étudiés sur devis.
+</p>
+
+</div>
+
+
+<div class="packages">
+
+
+<div class="package">
+
+<h3>🤖 Bot Telegram</h3>
+
+<p>
+Pour commencer avec un bot simple.
+</p>
+
+<div class="package-price">
+50 000 FCFA
+</div>
+
+<ul>
+<li>✓ Bot personnalisé</li>
+<li>✓ Commandes de base</li>
+<li>✓ Configuration</li>
+<li>✓ Mise en service</li>
+</ul>
+
+<a href="https://t.me/fadeltelegram" class="btn btn-secondary">
+En discuter
+</a>
+
+</div>
+
+
+<div class="package featured">
+
+<h3>🌐 Site professionnel</h3>
+
+<p>
+Pour présenter votre activité sur Internet.
+</p>
+
+<div class="package-price">
+100 000 FCFA
+</div>
+
+<ul>
+<li>✓ Design professionnel</li>
+<li>✓ Compatible téléphone</li>
+<li>✓ Pages principales</li>
+<li>✓ Mise en ligne</li>
+</ul>
+
+<a href="https://wa.me/22947699722" class="btn btn-primary">
+Commander
+</a>
+
+</div>
+
+
+<div class="package">
+
+<h3>🛒 Boutique en ligne</h3>
+
+<p>
+Pour commencer à vendre sur Internet.
+</p>
+
+<div class="package-price">
+200 000 FCFA
+</div>
+
+<ul>
+<li>✓ Catalogue produits</li>
+<li>✓ Panier</li>
+<li>✓ Commandes</li>
+<li>✓ Interface adaptée au téléphone</li>
+</ul>
+
+<a href="https://wa.me/22947699722" class="btn btn-secondary">
+En discuter
+</a>
+
+</div>
 
 
 </div>
@@ -790,16 +930,14 @@ Parler de mon projet →
 
 <div class="section-head">
 
-<div class="small-title">
-Exemples
-</div>
+<div class="small-title">Exemples</div>
 
 <h2>
-Voici ce que vous pouvez obtenir.
+À quoi ressemble votre futur outil ?
 </h2>
 
 <p>
-Des solutions pensées pour être simples à utiliser et adaptées à votre activité.
+Voici des exemples simples pour comprendre ce que vous pouvez commander.
 </p>
 
 </div>
@@ -808,7 +946,7 @@ Des solutions pensées pour être simples à utiliser et adaptées à votre acti
 <div class="examples">
 
 
-<div class="example">
+<div class="example-card">
 
 <div class="example-image">
 🤖
@@ -816,13 +954,11 @@ Des solutions pensées pour être simples à utiliser et adaptées à votre acti
 
 <div class="example-content">
 
-<h3>
-Un bot Telegram
-</h3>
+<h3>Votre bot Telegram</h3>
 
 <p>
-Vos clients peuvent discuter avec votre bot, recevoir des informations,
-passer une commande ou effectuer certaines actions automatiquement.
+Un client peut écrire au bot, choisir une option,
+obtenir une information ou envoyer une commande.
 </p>
 
 </div>
@@ -830,7 +966,7 @@ passer une commande ou effectuer certaines actions automatiquement.
 </div>
 
 
-<div class="example">
+<div class="example-card">
 
 <div class="example-image">
 🌐
@@ -838,12 +974,10 @@ passer une commande ou effectuer certaines actions automatiquement.
 
 <div class="example-content">
 
-<h3>
-Un site professionnel
-</h3>
+<h3>Votre site internet</h3>
 
 <p>
-Une présence en ligne claire pour présenter votre entreprise,
+Vos visiteurs découvrent votre entreprise,
 vos services, vos réalisations et vos coordonnées.
 </p>
 
@@ -852,7 +986,7 @@ vos services, vos réalisations et vos coordonnées.
 </div>
 
 
-<div class="example">
+<div class="example-card">
 
 <div class="example-image">
 🛒
@@ -860,13 +994,11 @@ vos services, vos réalisations et vos coordonnées.
 
 <div class="example-content">
 
-<h3>
-Une boutique en ligne
-</h3>
+<h3>Votre boutique</h3>
 
 <p>
-Vos produits sont présentés sur Internet et vos clients peuvent
-commander directement depuis leur téléphone.
+Vos clients voient vos produits, choisissent ce qu'ils
+veulent et peuvent vous contacter pour commander.
 </p>
 
 </div>
@@ -881,20 +1013,18 @@ commander directement depuis leur téléphone.
 </section>
 
 
-<!-- PROCESS -->
+<!-- FONCTIONNEMENT -->
 
-<section id="fonctionnement">
+<section>
 
 <div class="container">
 
 <div class="section-head">
 
-<div class="small-title">
-Comment ça marche ?
-</div>
+<div class="small-title">Comment ça marche ?</div>
 
 <h2>
-Simple, même si vous n'êtes pas informaticien.
+Vous n'avez qu'à expliquer votre idée.
 </h2>
 
 </div>
@@ -905,16 +1035,12 @@ Simple, même si vous n'êtes pas informaticien.
 
 <div class="step">
 
-<div class="step-number">
-01 — VOTRE IDÉE
-</div>
+<div class="step-number">01 — VOTRE BESOIN</div>
 
-<h3>
-Vous expliquez
-</h3>
+<h3>Vous m'expliquez</h3>
 
 <p>
-Dites-moi simplement ce que vous voulez créer.
+Vous me dites simplement ce que vous souhaitez créer.
 </p>
 
 </div>
@@ -922,16 +1048,12 @@ Dites-moi simplement ce que vous voulez créer.
 
 <div class="step">
 
-<div class="step-number">
-02 — DEVIS
-</div>
+<div class="step-number">02 — DISCUSSION</div>
 
-<h3>
-Nous définissons le prix
-</h3>
+<h3>Nous en discutons</h3>
 
 <p>
-Je vous propose une solution et un tarif adapté.
+Nous définissons les fonctionnalités et le prix final.
 </p>
 
 </div>
@@ -939,16 +1061,12 @@ Je vous propose une solution et un tarif adapté.
 
 <div class="step">
 
-<div class="step-number">
-03 — PAIEMENT
-</div>
+<div class="step-number">03 — DÉPÔT</div>
 
-<h3>
-Vous payez
-</h3>
+<h3>Vous effectuez le dépôt</h3>
 
 <p>
-L'acompte peut être payé en ligne via PayDunya.
+Après accord sur le projet, vous effectuez le dépôt convenu.
 </p>
 
 </div>
@@ -956,76 +1074,16 @@ L'acompte peut être payé en ligne via PayDunya.
 
 <div class="step">
 
-<div class="step-number">
-04 — LIVRAISON
-</div>
+<div class="step-number">04 — RÉALISATION</div>
 
-<h3>
-Je réalise votre projet
-</h3>
+<h3>Je crée votre projet</h3>
 
 <p>
-Après développement et tests, votre solution vous est livrée.
+Le développement commence et votre solution vous est livrée.
 </p>
 
 </div>
 
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- PAYMENT -->
-
-<section>
-
-<div class="container">
-
-<div class="payment">
-
-<div>
-
-<div class="small-title">
-Paiement en ligne
-</div>
-
-<h2>
-Commandez votre service simplement.
-</h2>
-
-<p>
-Les prestations proposées sur ce site pourront être réglées
-en ligne grâce à PayDunya.
-</p>
-
-</div>
-
-
-<div class="payment-box">
-
-<div class="payment-row">
-<span>Service choisi</span>
-<strong>Votre projet</strong>
-</div>
-
-<div class="payment-row">
-<span>Type</span>
-<strong>Prestation numérique</strong>
-</div>
-
-<div class="payment-row">
-<span>Paiement</span>
-<strong>En ligne</strong>
-</div>
-
-<div class="paydunya">
-✓ Paiement sécurisé avec PayDunya
-</div>
-
-</div>
 
 </div>
 
@@ -1040,31 +1098,36 @@ en ligne grâce à PayDunya.
 
 <div class="container">
 
-<div class="cta">
+<div class="contact-box">
 
 <div class="small-title">
-Votre projet
+CONTACT
 </div>
 
 <h2>
-Parlons de votre idée.
+Parlons de votre projet.
 </h2>
 
 <p>
-Vous avez besoin d'un site, d'un bot Telegram, d'une boutique
-ou d'une solution blockchain ? Expliquez-moi votre projet.
+Vous avez une idée de bot, de site internet,
+de boutique en ligne ou de solution blockchain ?
+Contactez-moi directement.
 </p>
 
 <div class="buttons" style="justify-content:center">
 
-<a href="https://t.me/fadeltelegram" class="btn btn-primary">
-💬 Me contacter sur Telegram
+<a href="https://wa.me/22947699722" class="btn btn-primary">
+💬 WhatsApp
 </a>
 
-<a href="https://wa.me/22947699722" class="btn btn-secondary">
-WhatsApp
+<a href="https://t.me/fadeltelegram" class="btn btn-secondary">
+✈️ Telegram
 </a>
 
+</div>
+
+<div class="contact-note">
+Réponse et devis après discussion du projet.
 </div>
 
 </div>
