@@ -3,97 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fadel Commerce | Commerce agricole & Solutions numériques</title>
-<meta name="description" content="Fadel Commerce : achat et vente de soja, karité et acajou, création de boutiques e-commerce, bots Telegram et services numériques.">
+<meta name="description" content="Fadel Commerce — Création de bots Telegram, sites web, boutiques en ligne et smart contracts.">
+<meta name="theme-color" content="#080b14">
+<title>Fadel Commerce — Digital Solutions</title>
+
 <style>
-*{box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f7f5;
-    color:#172018;
-    line-height:1.6
+font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:#080b14;color:#f5f7ff;line-height:1.6;
+overflow-x:hidden
 }
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+
+/* HEADER */
 header{
-    background:#123c28;
-    color:white;
-    padding:45px 20px;
-    text-align:center
+position:fixed;top:0;left:0;right:0;z-index:100;
+background:rgba(8,11,20,.78);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,.07)
 }
-header h1{font-size:38px;margin:0 0 10px}
-header p{font-size:18px;margin:0}
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:35px 20px
+.nav{
+height:72px;display:flex;align-items:center;justify-content:space-between
 }
-h2{
-    color:#123c28;
-    margin-top:10px
+.logo{
+font-size:1.15rem;font-weight:900;letter-spacing:-.5px
 }
-.intro{
-    background:white;
-    padding:25px;
-    border-radius:16px;
-    box-shadow:0 4px 18px rgba(0,0,0,.06);
-    margin-bottom:30px
+.logo span{color:#7c5cff}
+.nav-links{display:flex;gap:25px;font-size:.9rem;color:#aeb5c7}
+.nav-links a:hover{color:white}
+.menu{display:none;font-size:1.5rem}
+
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;align-items:center;
+padding:120px 0 70px;
+position:relative
 }
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:22px
+.hero:before{
+content:"";position:absolute;width:500px;height:500px;
+background:#6246ea;filter:blur(160px);opacity:.18;
+top:5%;right:-180px
 }
-.card{
-    background:white;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 4px 18px rgba(0,0,0,.08)
-}
-.card img{
-    width:100%;
-    height:210px;
-    object-fit:cover;
-    display:block
-}
-.card-content{padding:20px}
-.card h3{margin-top:0;color:#123c28}
-.button{
-    display:inline-block;
-    background:#168f50;
-    color:white;
-    text-decoration:none;
-    padding:12px 18px;
-    border-radius:9px;
-    font-weight:bold;
-    margin-top:8px
-}
-.button:hover{opacity:.9}
-.services{
-    margin-top:45px
-}
-.contact{
-    margin-top:45px;
-    background:#123c28;
-    color:white;
-    padding:30px;
-    border-radius:16px
-}
-.contact h2{color:white}
-footer{
-    text-align:center;
-    padding:25px;
-    color:#667066;
-    font-size:14px
+.hero-grid{
+display:grid;grid-template-columns:1.1fr .9fr;
+gap:60px;align-items:center
 }
 .badge{
-    display:inline-block;
-    background:#e5f4eb;
-    color:#12663a;
-    padding:6px 10px;
-    border-radius:20px;
-    font-size:13px;
-    font-weight:bold;
-    margin-bottom:10px
+display:inline-flex;padding:8px 13px;border-radius:50px;
+background:rgba(124,92,255,.12);
+border:1px solid rgba(124,92,255,.3);
+color:#a995ff;font-size:.8rem;font-weight:700;margin-bottom:22px
+}
+h1{
+font-size:clamp(2.7rem,7vw,5.4rem);
+line-height:.98;letter-spacing:-4px;margin-bottom:25px
+}
+.gradient{
+background:linear-gradient(100deg,#fff,#a995ff,#64d8ff);
+-webkit-background-clip:text;background-clip:text;color:transparent
+}
+.hero p{
+font-size:1.08rem;color:#aeb5c7;max-width:600px;margin-bottom:32px
+}
+.buttons{display:flex;gap:13px;flex-wrap:wrap}
+.btn{
+padding:13px 20px;border-radius:12px;font-weight:800;
+display:inline-flex;align-items:center;gap:8px;transition:.25s
+}
+.btn-primary{
+background:#7c5cff;box-shadow:0 10px 35px rgba(124,92,255,.25)
+}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-secondary{
+border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.04)
+}
+
+/* HERO VISUAL */
+.visual{
+position:relative;min-height:430px;display:flex;align-items:center;justify-content:center
+}
+.orb{
+width:290px;height:290px;border-radius:50%;
+background:radial-gradient(circle at 35% 30%,#9d8aff,#6246ea 45%,#17102f 75%);
+box-shadow:0 0 100px rgba(124,92,255,.35);
+display:flex;align-items:center;justify-content:center;
+font-size:5rem
+}
+.float-card{
+position:absolute;padding:15px 18px;border-radius:16px;
+background:rgba(19,24,39,.88);
+border:1px solid rgba(255,255,255,.1);
+box-shadow:0 20px 60px rgba(0,0,0,.3);
+backdrop-filter:blur(12px)
+}
+.card1{top:35px;left:0}
+.card2{right:0;top:120px}
+.card3{bottom:35px;left:35px}
+.float-title{font-size:.75rem;color:#8992a8}
+.float-value{font-weight:900;margin-top:3px}
+
+/* SECTIONS */
+section{padding:100px 0}
+.section-head{text-align:center;margin-bottom:55px}
+.eyebrow{
+color:#917cff;text-transform:uppercase;letter-spacing:2px;
+font-size:.72rem;font-weight:900;margin-bottom:10px
+}
+h2{font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-2px}
+.section-head p{color:#929bb0;max-width:600px;margin:14px auto 0}
+
+/* SERVICES */
+.services{
+display:grid;grid-template-columns:repeat(4,1fr);gap:17px
+}
+.service{
+padding:28px 23px;border-radius:20px;
+background:linear-gradient(145deg,#111727,#0d111d);
+border:1px solid rgba(255,255,255,.07);
+transition:.3s;position:relative;overflow:hidden
+}
+.service:hover{
+transform:translateY(-7px);
+border-color:rgba(124,92,255,.45)
+}
+.icon{
+font-size:2.1rem;margin-bottom:20px
+}
+.service h3{font-size:1.08rem;margin-bottom:10px}
+.service p{font-size:.88rem;color:#8f98ac}
+.service a{
+display:inline-block;margin-top:20px;color:#a995ff;font-size:.82rem;font-weight:800
+}
+
+/* SHOWCASE */
+.showcase{
+display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+}
+.project{
+min-height:260px;border-radius:22px;overflow:hidden;
+background:#111727;border:1px solid rgba(255,255,255,.07);
+position:relative
+}
+.project-art{
+height:180px;display:flex;align-items:center;justify-content:center;
+font-size:4rem;
+background:radial-gradient(circle,#25204b,#101522)
+}
+.project-info{padding:18px}
+.project-info h3{font-size:1rem}
+.project-info p{font-size:.78rem;color:#8e97aa}
+
+/* PROCESS */
+.process{
+display:grid;grid-template-columns:repeat(4,1fr);gap:18px
+}
+.step{
+padding:25px;border:1px solid rgba(255,255,255,.07);
+border-radius:18px;background:#0e1320
+}
+.number{color:#7c5cff;font-weight:900;font-size:.8rem;margin-bottom:15px}
+.step h3{font-size:1rem;margin-bottom:8px}
+.step p{color:#8f98ac;font-size:.82rem}
+
+/* PAYMENT */
+.payment{
+display:grid;grid-template-columns:1fr 1fr;gap:30px;
+align-items:center;padding:45px;border-radius:28px;
+background:linear-gradient(135deg,#131a2c,#0e1220);
+border:1px solid rgba(255,255,255,.08)
+}
+.payment h2{margin-bottom:15px}
+.payment p{color:#9aa3b6}
+.pay-card{
+padding:28px;border-radius:20px;background:#090d17;
+border:1px solid rgba(255,255,255,.08)
+}
+.pay-line{
+display:flex;justify-content:space-between;
+padding:13px 0;border-bottom:1px solid rgba(255,255,255,.06)
+}
+.pay-line:last-child{border:0}
+.pay-label{color:#8e97aa}
+.pay-value{font-weight:800}
+.paydunya{
+margin-top:20px;padding:12px;border-radius:10px;
+background:rgba(0,180,130,.1);color:#64e0b5;
+text-align:center;font-weight:800
+}
+
+/* CTA */
+.cta{
+text-align:center;padding:80px 25px;border-radius:30px;
+background:radial-gradient(circle at 50% 0,#24204c,#101522 55%);
+border:1px solid rgba(124,92,255,.2)
+}
+.cta p{color:#9ca5b8;max-width:600px;margin:15px auto 28px}
+
+/* FOOTER */
+footer{
+padding:45px 0;border-top:1px solid rgba(255,255,255,.07);
+color:#7f899e;font-size:.82rem
+}
+.footer{
+display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap
+}
+.footer strong{color:white}
+
+/* MOBILE */
+@media(max-width:850px){
+.nav-links{display:none}
+.menu{display:block}
+.hero-grid{grid-template-columns:1fr;gap:20px}
+.hero{padding-top:110px}
+.visual{min-height:330px}
+.services{grid-template-columns:1fr 1fr}
+.showcase{grid-template-columns:1fr}
+.process{grid-template-columns:1fr 1fr}
+.payment{grid-template-columns:1fr;padding:28px}
+}
+@media(max-width:520px){
+h1{letter-spacing:-2.5px}
+.services,.process{grid-template-columns:1fr}
+.visual{transform:scale(.88)}
+.card1{left:-5px}.card2{right:-5px}
+section{padding:75px 0}
 }
 </style>
 </head>
@@ -101,137 +238,245 @@ footer{
 <body>
 
 <header>
-    <h1>Fadel Commerce</h1>
-    <p>Commerce agricole • E-commerce • Solutions numériques</p>
+<div class="container nav">
+<a href="#" class="logo">FADEL<span>COMMERCE</span></a>
+<nav class="nav-links">
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#process">Processus</a>
+<a href="#contact">Contact</a>
+</nav>
+<div class="menu">☰</div>
+</div>
 </header>
 
-<main class="container">
+<main>
 
-<section class="intro">
-    <span class="badge">COMMERCE & SERVICES</span>
-    <h2>Bienvenue chez Fadel Commerce</h2>
-    <p>
-        Fadel Commerce développe des activités commerciales et numériques :
-        approvisionnement en produits agricoles, mise en relation commerciale,
-        création de boutiques e-commerce, automatisation et développement de bots Telegram.
-    </p>
-    <p>
-        Pour connaître les disponibilités, les volumes et les tarifs,
-        contactez-nous directement.
-    </p>
+<!-- HERO -->
+<section class="hero">
+<div class="container hero-grid">
+
+<div>
+<div class="badge">✦ DIGITAL SOLUTIONS</div>
+
+<h1>
+Transformons vos
+<span class="gradient">idées</span>
+en solutions digitales.
+</h1>
+
+<p>
+Je conçois des solutions numériques modernes et sur mesure :
+bots Telegram, sites web, boutiques en ligne et smart contracts.
+</p>
+
+<div class="buttons">
+<a href="#contact" class="btn btn-primary">Démarrer un projet →</a>
+<a href="#services" class="btn btn-secondary">Découvrir les services</a>
+</div>
+</div>
+
+<div class="visual">
+<div class="orb">⚡</div>
+
+<div class="float-card card1">
+<div class="float-title">AUTOMATION</div>
+<div class="float-value">Telegram Bot 🤖</div>
+</div>
+
+<div class="float-card card2">
+<div class="float-title">WEB</div>
+<div class="float-value">Modern Website 🌐</div>
+</div>
+
+<div class="float-card card3">
+<div class="float-title">BLOCKCHAIN</div>
+<div class="float-value">Smart Contract ⛓️</div>
+</div>
+</div>
+
+</div>
 </section>
 
+<!-- SERVICES -->
+<section id="services">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">Ce que je fais</div>
+<h2>Des solutions conçues pour vos projets.</h2>
+<p>De l'idée au produit final, je transforme vos besoins en outils digitaux fonctionnels.</p>
+</div>
+
+<div class="services">
+
+<article class="service">
+<div class="icon">🤖</div>
+<h3>Bots Telegram</h3>
+<p>Bots personnalisés pour automatiser vos ventes, notifications, communautés et services.</p>
+<a href="#contact">Créer mon bot →</a>
+</article>
+
+<article class="service">
+<div class="icon">🌐</div>
+<h3>Sites web</h3>
+<p>Sites modernes, rapides, responsives et adaptés à votre activité ou votre marque.</p>
+<a href="#contact">Créer mon site →</a>
+</article>
+
+<article class="service">
+<div class="icon">⛓️</div>
+<h3>Smart Contracts</h3>
+<p>Développement de smart contracts et solutions blockchain avec Solidity.</p>
+<a href="#contact">Parler du projet →</a>
+</article>
+
+<article class="service">
+<div class="icon">🛒</div>
+<h3>Boutiques en ligne</h3>
+<p>Création de plateformes e-commerce avec catalogue, commandes et paiements.</p>
+<a href="#contact">Créer ma boutique →</a>
+</article>
+
+</div>
+</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">Portfolio</div>
+<h2>Quelques projets.</h2>
+<p>Des concepts et solutions développés autour de l'automatisation, du web et de la blockchain.</p>
+</div>
+
+<div class="showcase">
+
+<div class="project">
+<div class="project-art">🤖</div>
+<div class="project-info">
+<h3>Telegram Automation</h3>
+<p>Bot personnalisé & automatisation</p>
+</div>
+</div>
+
+<div class="project">
+<div class="project-art">📊</div>
+<div class="project-info">
+<h3>SPORT AI ENGINE</h3>
+<p>Analyse et automatisation sportive</p>
+</div>
+</div>
+
+<div class="project">
+<div class="project-art">⛓️</div>
+<div class="project-info">
+<h3>Blockchain Solutions</h3>
+<p>Smart contracts & tokens</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+<div class="container">
+<div class="section-head">
+<div class="eyebrow">Méthode</div>
+<h2>Simple. Rapide. Professionnel.</h2>
+</div>
+
+<div class="process">
+
+<div class="step">
+<div class="number">01 — BESOIN</div>
+<h3>Vous expliquez votre idée</h3>
+<p>Vous présentez votre projet et vos objectifs.</p>
+</div>
+
+<div class="step">
+<div class="number">02 — SOLUTION</div>
+<h3>Nous définissons le projet</h3>
+<p>Fonctionnalités, budget et délai sont définis.</p>
+</div>
+
+<div class="step">
+<div class="number">03 — DÉVELOPPEMENT</div>
+<h3>Je construis votre solution</h3>
+<p>Développement, tests et améliorations.</p>
+</div>
+
+<div class="step">
+<div class="number">04 — LIVRAISON</div>
+<h3>Votre projet est livré</h3>
+<p>Vous recevez votre solution prête à utiliser.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PAYMENT -->
 <section>
-    <h2>🌱 Produits agricoles</h2>
+<div class="container">
+<div class="payment">
 
-    <div class="grid">
+<div>
+<div class="eyebrow">Paiement sécurisé</div>
+<h2>Payez simplement en ligne.</h2>
+<p>
+Pour les prestations commandées sur la plateforme,
+le paiement pourra être effectué via PayDunya.
+</p>
+</div>
 
-        <article class="card">
-            <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Soy_beans.jpg" alt="Soja">
-            <div class="card-content">
-                <h3>Soja</h3>
-                <p>
-                    Achat et vente de soja. Recherche de fournisseurs,
-                    acheteurs et possibilités d'approvisionnement selon les volumes.
-                </p>
-                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20soja.">
-                    Demander un devis
-                </a>
-            </div>
-        </article>
+<div class="pay-card">
+<div class="pay-line">
+<span class="pay-label">Service</span>
+<span class="pay-value">Votre projet</span>
+</div>
+<div class="pay-line">
+<span class="pay-label">Paiement</span>
+<span class="pay-value">Acompte</span>
+</div>
+<div class="pay-line">
+<span class="pay-label">Statut</span>
+<span class="pay-value">Sécurisé</span>
+</div>
+<div class="paydunya">✓ Paiement via PayDunya</div>
+</div>
 
-        <article class="card">
-            <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Shea_Nuts.jpg" alt="Karité">
-            <div class="card-content">
-                <h3>Karité</h3>
-                <p>
-                    Achat et vente de produits issus du karité.
-                    Disponibilité et conditions commerciales sur demande.
-                </p>
-                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20karit%C3%A9.">
-                    Demander un devis
-                </a>
-            </div>
-        </article>
-
-        <article class="card">
-            <img src="https://c.pxhere.com/images/b6/d6/8d54417f18f2512d8a2ea2a94a2a-1437967.jpg!d" alt="Noix de cajou">
-            <div class="card-content">
-                <h3>Acajou / Anacarde</h3>
-                <p>
-                    Achat et vente d'anacarde et recherche de partenaires
-                    commerciaux selon les besoins.
-                </p>
-                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27anacarde.">
-                    Demander un devis
-                </a>
-            </div>
-        </article>
-
-    </div>
+</div>
+</div>
 </section>
 
-<section class="services">
-    <h2>💻 Nos solutions numériques</h2>
+<!-- CTA -->
+<section id="contact">
+<div class="container">
+<div class="cta">
+<div class="eyebrow">Un projet en tête ?</div>
+<h2>Construisons-le ensemble.</h2>
+<p>
+Décrivez-moi votre projet et je vous proposerai une solution adaptée à vos besoins.
+</p>
 
-    <div class="grid">
-
-        <article class="card">
-            <div class="card-content">
-                <h3>🛒 Création de e-commerce</h3>
-                <p>
-                    Création de boutiques en ligne, catalogue produits,
-                    commandes, paiement et présentation professionnelle.
-                </p>
-                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20veux%20cr%C3%A9er%20une%20boutique%20e-commerce.">
-                    Demander un projet
-                </a>
-            </div>
-        </article>
-
-        <article class="card">
-            <div class="card-content">
-                <h3>🤖 Bots Telegram</h3>
-                <p>
-                    Création et automatisation de bots Telegram pour
-                    publicité, gestion de clients, commandes et services.
-                </p>
-                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20un%20bot%20Telegram.">
-                    Demander un projet
-                </a>
-            </div>
-        </article>
-
-        <article class="card">
-            <div class="card-content">
-                <h3>📱 Services numériques</h3>
-                <p>
-                    Assistance numérique, recherche d'informations,
-                    automatisation et solutions adaptées aux entrepreneurs.
-                </p>
-                <a class="button" href="https://wa.me/2290147699722?text=Bonjour%20Fadel%20Commerce%2C%20je%20veux%20en%20savoir%20plus%20sur%20vos%20services.">
-                    Nous contacter
-                </a>
-            </div>
-        </article>
-
-    </div>
-</section>
-
-<section class="contact">
-    <h2>📞 Contact</h2>
-    <p><strong>WhatsApp :</strong> +229 01 47 69 97 22</p>
-    <p><strong>Email :</strong> fadelallagbe02@gmail.com</p>
-
-    <a class="button" href="mailto:fadelallagbe02@gmail.com">
-        Nous contacter par email
-    </a>
+<div class="buttons" style="justify-content:center">
+<a href="https://t.me/" class="btn btn-primary">💬 Telegram</a>
+<a href="https://wa.me/" class="btn btn-secondary">WhatsApp</a>
+</div>
+</div>
+</div>
 </section>
 
 </main>
 
 <footer>
-    © 2026 Fadel Commerce — Commerce agricole & Solutions numériques
+<div class="container footer">
+<div><strong>FADEL COMMERCE</strong> — Digital Solutions</div>
+<div>© 2026 Tous droits réservés.</div>
+</div>
 </footer>
 
 </body>
